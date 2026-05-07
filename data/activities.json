@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "name": "Android APP",
+        "description": "Work on mobile application development",
+        "icon": "fas fa-code"
+    },
+    {
+        "id": 2,
+        "name": "YouTube Video",
+        "description": "Create and edit video content",
+        "icon": "fas fa-video"
+    },
+    {
+        "id": 3,
+        "name": "Exercise",
+        "description": "Daily workout routine",
+        "icon": "fas fa-dumbbell"
+    },
+    {
+        "id": 4,
+        "name": "Reading",
+        "description": "Study technical books and articles",
+        "icon": "fas fa-book"
+    },
+    {
+        "id": 5,
+        "name": "Writing",
+        "description": "Write blog posts, articles, or documentation",
+        "icon": "fas fa-pen"
+    },
+    {
+        "id": 6,
+        "name": "Learning",
+        "description": "Online courses and skill development",
+        "icon": "fas fa-graduation-cap"
+    },
+    {
+        "id": 7,
+        "name": "Meeting",
+        "description": "Attend or conduct meetings",
+        "icon": "fas fa-users"
+    },
+    {
+        "id": 8,
+        "name": "Coding",
+        "description": "General programming and development tasks",
+        "icon": "fas fa-laptop-code"
+    },
+    {
+        "id": 9,
+        "name": "Planning",
+        "description": "Project planning and organization",
+        "icon": "fas fa-calendar-check"
+    },
+    {
+        "id": 10,
+        "name": "Emails",
+        "description": "Check and respond to emails",
+        "icon": "fas fa-envelope"
+    },
+    {
+        "id": 11,
+        "name": "Community Managing",
+        "description": "Manage community interactions and engagement",
+        "icon": "fas fa-comments"
+    }
+]
