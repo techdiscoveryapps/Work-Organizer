@@ -124,8 +124,7 @@ body {
 
 /* Navigation */
 .navbar {
-    background: rgba(26, 26, 26, 0.95) !important;
-    backdrop-filter: blur(10px);
+    background: rgba(26, 26, 26, 0.98) !important;
     border-bottom: 1px solid var(--border-color);
     box-shadow: var(--shadow-md);
 }
@@ -149,31 +148,14 @@ body {
     padding: 0.75rem 1rem !important;
     border-radius: 8px;
     margin: 0 0.25rem;
-    transition: var(--transition-base);
+    transition: background 0.2s ease, color 0.2s ease;
     position: relative;
-    overflow: hidden;
-}
-
-.navbar-nav .nav-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.2), transparent);
-    transition: left var(--transition-slow);
-}
-
-.navbar-nav .nav-link:hover::before {
-    left: 100%;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
     color: var(--text-primary) !important;
-    background: rgba(99, 102, 241, 0.1);
-    transform: translateY(-1px);
+    background: rgba(99, 102, 241, 0.15);
 }
 
 /* Cards - Force dark theme */
@@ -350,24 +332,6 @@ body {
     border: none;
     position: relative;
     overflow: hidden;
-}
-
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    transform: translate(-50%, -50%);
-    transition: width var(--transition-base), height var(--transition-base);
-}
-
-.btn:active::before {
-    width: 300px;
-    height: 300px;
 }
 
 .btn-primary {
@@ -777,6 +741,49 @@ body {
 
 .hover-scale:hover {
     transform: scale(1.05);
+}
+
+/* Credits Modal Styles */
+.social-link-card {
+    display: block;
+    padding: 1rem 0.5rem;
+    border-radius: 12px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    transition: var(--transition-base);
+    text-align: center;
+    height: 100%;
+}
+
+.social-link-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-primary);
+    background: var(--bg-card);
+    box-shadow: var(--shadow-md);
+}
+
+.social-icon-wrapper {
+    transition: var(--transition-base);
+}
+
+.social-link-card:hover .social-icon-wrapper {
+    transform: scale(1.1);
+}
+
+.social-link-card .small {
+    color: var(--text-primary) !important;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.bmc-button {
+    transition: var(--transition-base);
+    display: inline-block;
+}
+
+.bmc-button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
 }
 
 /* Section Headers */

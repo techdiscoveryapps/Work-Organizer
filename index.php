@@ -6,8 +6,8 @@
     <title>Work Organizer • Daily Activity Tracker</title>
     <!-- Bootstrap 5.3 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Font Awesome 6 for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome 6.5.1 for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Custom dark theme styles -->
     <link rel="stylesheet" href="style.css">
     <style>
@@ -42,22 +42,27 @@
         <div class="collapse navbar-collapse" id="navMenu">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="navigateTo('dashboard'); return false;" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                    <a class="nav-link" href="#" onclick="navigateTo('dashboard'); return false;">
                         <i class="fas fa-home me-1"></i> Dashboard
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="navigateTo('activities'); return false;" data-bs-toggle="collapse" data-bs-target="#navMenu">
-                        <i class="fas fa-list me-1"></i> My Activities
+                    <a class="nav-link" href="#" onclick="navigateTo('activities'); return false;">
+                        <i class="fas fa-list me-1"></i> Activities
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="navigateTo('stats')" data-bs-toggle="collapse" data-bs-target="#navMenu">
-                        <i class="fas fa-chart-bar me-1"></i> Stats
+                    <a class="nav-link" href="#" onclick="navigateTo('stats'); return false;">
+                        <i class="fas fa-chart-bar me-1"></i> Statistics
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#creditsModal">
+                        <i class="fas fa-heart text-danger me-1"></i> About
                     </a>
                 </li>
             </ul>
-            <span class="navbar-text text-muted d-none d-lg-inline" id="today-full-date"></span>
+            <span class="navbar-text text-muted d-none d-lg-inline me-3" id="today-full-date"></span>
         </div>
     </div>
 </nav>
@@ -71,15 +76,15 @@
     <!-- ==================== DASHBOARD SECTION ==================== -->
     <div id="dashboard" class="section">
         <div class="section-header">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-2">
-                <div>
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <div class="text-center text-md-start">
                     <h2 class="mb-2 fade-in">
                         <i class="fas fa-clipboard-check me-2 text-gradient"></i>
                         Today's Activities
                     </h2>
                     <p class="text-muted mb-0">Track your daily progress and stay productive</p>
                 </div>
-                <div class="d-flex flex-column gap-2 w-100 w-md-auto" style="max-width: 200px;">
+                <div class="d-flex flex-column gap-2 w-100 w-md-auto align-items-center align-items-md-end" style="max-width: 200px;">
                     <button class="btn btn-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#activityModal" onclick="resetActivityModal()">
                         <i class="fas fa-plus me-1"></i> Add Activity
                     </button>
@@ -122,21 +127,21 @@
     <!-- ==================== MY ACTIVITIES SECTION ==================== -->
     <div id="activities" class="section d-none">
         <div class="section-header">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
-                <div>
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <div class="text-center text-md-start">
                     <h2 class="mb-2">
                         <i class="fas fa-tasks me-2 text-gradient"></i>
                         My Activities
                     </h2>
                     <p class="text-muted mb-0">Manage your daily tasks and activities</p>
                 </div>
-                <div class="d-flex flex-column gap-2 w-100 w-md-auto" style="max-width: 200px;">
+                <div class="d-flex flex-column gap-2 w-100 w-md-auto align-items-center align-items-md-end" style="max-width: 200px;">
                     <button class="btn btn-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#activityModal" onclick="resetActivityModal()">
                         <i class="fas fa-plus me-1"></i> Add Activity
                     </button>
                     <div class="position-relative w-100">
-                        <i class="fas fa-search position-absolute top-50 start-50 translate-middle text-muted small" style="margin-left: -45px;"></i>
-                        <input type="text" id="activities-search" class="form-control form-control-sm text-center" placeholder="Search..." oninput="filterActivitiesList()">
+                        <i class="fas fa-search position-absolute top-50 start-0 translate-middle-y text-muted small ms-3"></i>
+                        <input type="text" id="activities-search" class="form-control form-control-sm ps-5" placeholder="Search..." oninput="filterActivitiesList()">
                     </div>
                 </div>
             </div>
@@ -150,22 +155,20 @@
     <!-- ==================== STATS SECTION ==================== -->
     <div id="stats" class="section d-none">
         <div class="section-header">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-2">
-                <div>
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <div class="text-center text-md-start">
                     <h2 class="mb-2">
                         <i class="fas fa-chart-bar me-2 text-gradient"></i>
-                        Monthly Stats
+                        Monthly Statistics
                     </h2>
                     <p class="text-muted mb-0">Analyze your productivity patterns and trends</p>
                 </div>
-                <div class="d-flex flex-column gap-2 w-100 w-md-auto" style="max-width: 200px;">
-                    <div style="min-width: 0;" class="w-100">
-                        <label class="form-label small text-muted mb-1">Year</label>
-                        <select id="stats-year" class="form-select form-select-sm w-100"></select>
+                <div class="d-flex flex-column flex-md-row gap-2 w-100 w-md-auto align-items-center align-items-md-end" style="max-width: 410px;">
+                    <div class="w-100" style="max-width: 200px;">
+                        <select id="stats-year" class="form-select form-select-sm w-100 text-center"></select>
                     </div>
-                    <div style="min-width: 0;" class="w-100">
-                        <label class="form-label small text-muted mb-1">Month</label>
-                        <select id="stats-month" class="form-select form-select-sm w-100"></select>
+                    <div class="w-100" style="max-width: 200px;">
+                        <select id="stats-month" class="form-select form-select-sm w-100 text-center"></select>
                     </div>
                 </div>
             </div>
@@ -346,12 +349,106 @@
     </div>
 </div>
 
+<!-- ==================== ABOUT MODAL ==================== -->
+<div class="modal fade" id="creditsModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <i class="fas fa-user-astronaut me-2 text-gradient"></i>About the Developer
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body text-center py-4">
+                <div class="mb-4">
+                    <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center mb-3 shadow-glow" style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--accent-primary), var(--accent-success)) !important;">
+                        <i class="fas fa-rocket fa-3x text-white"></i>
+                    </div>
+                    <h4>Tech Discovery Apps</h4>
+                    <p class="text-muted">Developing tools to make life easier.</p>
+                </div>
+                
+                <div class="row g-2 mb-4" id="social-links-container">
+                    <!-- Populated by JS -->
+                </div>
+
+                <div class="pt-3 border-top">
+                    <h6 class="mb-3 text-muted">Support the Project</h6>
+                    <a href="https://buymeacoffee.com/techdiscoveryapps" target="_blank" class="bmc-button">
+                        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 50px !important; width: 180px !important;">
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 <script>
 // ====================== GLOBAL VARIABLES ======================
+const creditsData = [
+    {
+        "name": "Google Play",
+        "url": "https://play.google.com/store/apps/developer?id=Tech+Discovery+Apps",
+        "icon": "fa-brands fa-google-play",
+        "title": "Google Play Store",
+        "color": "#607d8b"
+    },
+    {
+        "name": "GitHub",
+        "url": "https://github.com/techdiscoveryapps",
+        "icon": "fa-brands fa-github",
+        "title": "GitHub",
+        "color": "#ffffff"
+    },
+    {
+        "name": "Telegram",
+        "url": "https://t.me/TechDiscoveryCommunity",
+        "icon": "fa-brands fa-telegram",
+        "title": "Telegram Community Group",
+        "color": "#0088cc"
+    },
+    {
+        "name": "YouTube",
+        "url": "https://www.youtube.com/@techdiscoverylinks",
+        "icon": "fa-brands fa-youtube",
+        "title": "Canale YouTube",
+        "color": "#ff0000"
+    },
+    {
+        "name": "Instagram",
+        "url": "https://www.instagram.com/techdiscoverylinks",
+        "icon": "fa-brands fa-instagram",
+        "title": "Instagram",
+        "color": "#e1306c"
+    },
+    {
+        "name": "X",
+        "url": "https://x.com/techdiscoveryl",
+        "icon": "fa-brands fa-x-twitter",
+        "title": "X (Twitter)",
+        "color": "#ffffff"
+    },
+    {
+        "name": "Pinterest",
+        "url": "https://it.pinterest.com/techdiscoverylinks",
+        "icon": "fa-brands fa-pinterest",
+        "title": "Pinterest",
+        "color": "#bd081c"
+    },
+    {
+        "name": "Coffee",
+        "url": "https://buymeacoffee.com/techdiscoveryapps",
+        "icon": "fas fa-coffee",
+        "title": "Buy Me a Coffee",
+        "color": "#ffdd00"
+    }
+];
 let allActivities = [];
 let todayCompletions = [];
 let currentDateStr = '';
@@ -1173,6 +1270,22 @@ async function populateMonthSelects() {
 }
 
 // ====================== INITIAL LOAD ======================
+function renderCredits() {
+    const container = document.getElementById('social-links-container');
+    if (!container) return;
+    
+    container.innerHTML = creditsData.map(social => `
+        <div class="col-6 col-sm-3">
+            <a href="${social.url}" target="_blank" class="social-link-card text-decoration-none" title="${social.title}">
+                <div class="social-icon-wrapper mb-2" style="color: ${social.color};">
+                    <i class="${social.icon} fa-2x"></i>
+                </div>
+                <div class="small fw-bold">${social.name}</div>
+            </a>
+        </div>
+    `).join('');
+}
+
 window.onload = async function () {
     console.log('Page loaded, calling loadDashboard');
     try {
@@ -1181,6 +1294,7 @@ window.onload = async function () {
         populateMonthSelects();
         setupIconSelection();
         renderActivitiesList();
+        renderCredits();
     } catch (error) {
         console.error('Error during initial load:', error);
         alert('Error loading application: ' + error.message);
