@@ -2,6 +2,8 @@
 
 A beautiful, modern, dark-themed web application to track your daily productivity and habits.
 
+![Dashboard Preview](screenshots/dashboard.png)
+
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![PHP](https://img.shields.io/badge/PHP-8.0+-777bb4.svg)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-563d7c.svg)
@@ -12,7 +14,11 @@ A beautiful, modern, dark-themed web application to track your daily productivit
 - **Daily Progress**: Real-time progress tracking for your current day.
 - **Activity Management**: Add, edit, delete, and search through your activities.
 - **Stats Dashboard**: Analyze your productivity patterns with monthly and yearly statistics.
-- **Local Storage**: Uses JSON files for data storage—no database setup required.
+
+### Screenshots
+| Dashboard | My Activities | Stats Analysis |
+| :---: | :---: | :---: |
+| ![Dashboard](screenshots/dashboard.png) | ![Activities](screenshots/activities.png) | ![Stats](screenshots/stats.png) |
 
 ## 🛠️ Installation
 1. Clone the repository to your local machine or web server.
