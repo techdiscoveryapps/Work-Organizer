@@ -380,13 +380,74 @@
 
                 <div class="pt-3 border-top">
                     <h6 class="mb-3 text-muted">Support the Project</h6>
-                    <a href="https://buymeacoffee.com/techdiscoveryapps" target="_blank" class="bmc-button">
+                    <a href="https://buymeacoffee.com/techdiscoveryapps" target="_blank" class="bmc-button d-inline-block">
                         <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 50px !important; width: 180px !important;">
                     </a>
+                    <div class="mt-3">
+                        <button class="btn revolut-btn-pay" data-bs-toggle="modal" data-bs-target="#donateModal">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" style="flex-shrink: 0;"><path d="M20.9133 6.9566C20.9133 3.1208 17.7898 0 13.9503 0H2.424v3.8605h10.9782c1.7376 0 3.177 1.3651 3.2087 3.043.016.84-.2994 1.633-.8878 2.2324-.5886.5998-1.375.9303-2.2144.9303H9.2322a.2756.2756 0 0 0-.2755.2752v3.431c0 .0585.018.1142.052.1612L16.2646 24h5.3114l-7.2727-10.094c3.6625-.1838 6.61-3.2612 6.61-6.9494zM6.8943 5.9229H2.424V24h4.4704z"/></svg><span class="revolut-pay-label">Donate via Revolut Pay</span>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Revolut Donate Modal -->
+<div class="modal fade" id="donateModal" tabindex="1" aria-labelledby="donateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content revolut-donate-modal-content">
+            <div class="modal-header revolut-donate-modal-header">
+                <h5 class="modal-title d-flex align-items-center" id="donateModalLabel">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="me-2" style="fill: #fff; flex-shrink: 0;"><path d="M20.9133 6.9566C20.9133 3.1208 17.7898 0 13.9503 0H2.424v3.8605h10.9782c1.7376 0 3.177 1.3651 3.2087 3.043.016.84-.2994 1.633-.8878 2.2324-.5886.5998-1.375.9303-2.2144.9303H9.2322a.2756.2756 0 0 0-.2755.2752v3.431c0 .0585.018.1142.052.1612L16.2646 24h5.3114l-7.2727-10.094c3.6625-.1838 6.61-3.2612 6.61-6.9494zM6.8943 5.9229H2.424V24h4.4704z"/></svg>Donate via Revolut Pay
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="mb-4 text-muted">Select an amount or enter your own:</p>
+
+                <div class="row g-2 mb-3">
+                    <div class="col-4">
+                        <button class="btn btn-outline-light w-100 revolut-amount-btn" data-amount="1">&euro;1</button>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-outline-light w-100 revolut-amount-btn" data-amount="3">&euro;3</button>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-outline-light w-100 revolut-amount-btn" data-amount="5">&euro;5</button>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-outline-light w-100 revolut-amount-btn" data-amount="10">&euro;10</button>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-outline-light w-100 revolut-amount-btn" data-amount="20">&euro;20</button>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-outline-light w-100 revolut-amount-btn" data-amount="50">&euro;50</button>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="customAmount" class="form-label">Custom Amount (EUR)</label>
+                    <input type="number" class="form-control revolut-donate-form-control" id="customAmount" placeholder="Enter amount" min="1" step="0.01">
+                </div>
+
+                <div class="alert revolut-donate-alert-info">
+                    <small>
+                        <i class="fas fa-info-circle me-1"></i>
+                        You will be redirected to Revolut to complete your donation.
+                    </small>
+                </div>
+            </div>
+            <div class="modal-footer revolut-donate-modal-footer">
+                <button type="button" class="btn revolut-btn-pay-outline" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn revolut-btn-pay" id="donateBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" style="flex-shrink: 0;"><path d="M20.9133 6.9566C20.9133 3.1208 17.7898 0 13.9503 0H2.424v3.8605h10.9782c1.7376 0 3.177 1.3651 3.2087 3.043.016.84-.2994 1.633-.8878 2.2324-.5886.5998-1.375.9303-2.2144.9303H9.2322a.2756.2756 0 0 0-.2755.2752v3.431c0 .0585.018.1142.052.1612L16.2646 24h5.3114l-7.2727-10.094c3.6625-.1838 6.61-3.2612 6.61-6.9494zM6.8943 5.9229H2.424V24h4.4704z"/></svg><span class="revolut-pay-label">Donate</span>
+                </button>
             </div>
         </div>
     </div>
@@ -1292,6 +1353,47 @@ window.onload = async function () {
         alert('Error loading application: ' + error.message);
     }
 };
+
+// ====================== REVOLUT DONATION MODAL ======================
+document.addEventListener('DOMContentLoaded', function() {
+    let selectedAmount = 5;
+
+    document.querySelectorAll('.revolut-amount-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.revolut-amount-btn').forEach(b => {
+                b.classList.remove('revolut-amount-active');
+            });
+            this.classList.add('revolut-amount-active');
+            selectedAmount = parseFloat(this.dataset.amount);
+            document.getElementById('customAmount').value = selectedAmount;
+        });
+    });
+
+    const customAmountInput = document.getElementById('customAmount');
+    if (customAmountInput) {
+        customAmountInput.addEventListener('input', function() {
+            document.querySelectorAll('.revolut-amount-btn').forEach(b => {
+                b.classList.remove('revolut-amount-active');
+            });
+            selectedAmount = parseFloat(this.value);
+        });
+    }
+
+    const donateBtn = document.getElementById('donateBtn');
+    if (donateBtn) {
+        donateBtn.addEventListener('click', function() {
+            const customAmount = parseFloat(document.getElementById('customAmount').value);
+            const finalAmount = customAmount || selectedAmount || 5;
+
+            const amountInCents = Math.round(finalAmount * 100);
+            const revolutLink = `https://revolut.me/demludi?amount=${amountInCents}&currency=EUR&note=Work-Organizer-Github`;
+            window.open(revolutLink, '_blank');
+
+            const modal = bootstrap.Modal.getInstance(document.getElementById('donateModal'));
+            modal.hide();
+        });
+    }
+});
 
 // Add keyboard shortcuts
 document.addEventListener('keydown', function(e) {

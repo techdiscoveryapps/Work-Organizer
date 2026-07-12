@@ -855,3 +855,129 @@ body {
     font-size: 0.8rem;
     margin-top: 0.5rem !important;
 }
+
+/* ==================== REVOLUT DONATION ==================== */
+
+.revolut-btn-pay {
+    background: #191C1F;
+    border: 1px solid #191C1F;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.revolut-btn-pay svg {
+    fill: #fff;
+    flex-shrink: 0;
+}
+
+.revolut-btn-pay .revolut-pay-label {
+    margin-left: 8px;
+    line-height: 1.5;
+}
+
+.revolut-btn-pay:hover {
+    background: #191C1F !important;
+    border-color: #fff !important;
+    color: #fff !important;
+}
+
+.revolut-btn-pay:hover svg {
+    fill: #fff !important;
+}
+
+.revolut-btn-pay:active {
+    background: #191C1F !important;
+    border-color: #fff !important;
+    color: #fff !important;
+}
+
+.revolut-btn-pay:active svg {
+    fill: #fff !important;
+}
+
+.revolut-btn-pay-outline {
+    background: transparent;
+    border: 1px solid var(--text-secondary);
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.revolut-btn-pay-outline:hover {
+    background: #191C1F !important;
+    border-color: #fff !important;
+    color: #fff !important;
+}
+
+.revolut-btn-pay-outline:active {
+    background: #191C1F !important;
+    border-color: #fff !important;
+    color: #fff !important;
+}
+
+.revolut-amount-btn.revolut-amount-active {
+    background: #191C1F !important;
+    border-color: #191C1F !important;
+    color: #fff !important;
+}
+
+.revolut-amount-btn.revolut-amount-active:hover {
+    background: #191C1F !important;
+    border-color: #fff !important;
+    color: #fff !important;
+}
+
+.revolut-amount-btn:hover {
+    background: #191C1F !important;
+    border-color: #fff !important;
+    color: #fff !important;
+}
+
+.revolut-donate-modal-content {
+    background: var(--bg-modal);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.revolut-donate-modal-header {
+    border-color: var(--border-color);
+    background: #191C1F;
+    border-radius: 0;
+}
+
+.revolut-donate-modal-footer {
+    border-color: var(--border-color);
+}
+
+.revolut-donate-form-control {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.revolut-donate-form-control::placeholder {
+    color: var(--text-muted);
+}
+
+.revolut-donate-form-control:focus {
+    background: var(--bg-secondary);
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 0.2rem rgba(99, 102, 241, 0.25);
+}
+
+.revolut-donate-alert-info {
+    background: rgba(6, 182, 212, 0.1);
+    border-color: rgba(6, 182, 212, 0.3);
+    color: var(--text-secondary);
+}
