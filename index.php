@@ -372,6 +372,12 @@
                     <!-- Populated by JS -->
                 </div>
 
+                <div class="mb-4">
+                    <a href="https://www.techdiscoveryapps.com" target="_blank" class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-globe me-1"></i>www.techdiscoveryapps.com
+                    </a>
+                </div>
+
                 <div class="pt-3 border-top">
                     <h6 class="mb-3 text-muted">Support the Project</h6>
                     <a href="https://buymeacoffee.com/techdiscoveryapps" target="_blank" class="bmc-button">
@@ -415,14 +421,14 @@ const creditsData = [
     },
     {
         "name": "YouTube",
-        "url": "https://www.youtube.com/@techdiscoverylinks",
+        "url": "https://www.youtube.com/@techdiscoveryapps",
         "icon": "fa-brands fa-youtube",
-        "title": "Canale YouTube",
+        "title": "YouTube",
         "color": "#ff0000"
     },
     {
         "name": "Instagram",
-        "url": "https://www.instagram.com/techdiscoverylinks",
+        "url": "https://www.instagram.com/techdiscoveryapps",
         "icon": "fa-brands fa-instagram",
         "title": "Instagram",
         "color": "#e1306c"
@@ -434,20 +440,6 @@ const creditsData = [
         "title": "X (Twitter)",
         "color": "#ffffff"
     },
-    {
-        "name": "Pinterest",
-        "url": "https://it.pinterest.com/techdiscoverylinks",
-        "icon": "fa-brands fa-pinterest",
-        "title": "Pinterest",
-        "color": "#bd081c"
-    },
-    {
-        "name": "Coffee",
-        "url": "https://buymeacoffee.com/techdiscoveryapps",
-        "icon": "fas fa-coffee",
-        "title": "Buy Me a Coffee",
-        "color": "#ffdd00"
-    }
 ];
 let allActivities = [];
 let todayCompletions = [];
@@ -1275,7 +1267,7 @@ function renderCredits() {
     if (!container) return;
     
     container.innerHTML = creditsData.map(social => `
-        <div class="col-6 col-sm-3">
+        <div class="col-4">
             <a href="${social.url}" target="_blank" class="social-link-card text-decoration-none" title="${social.title}">
                 <div class="social-icon-wrapper mb-2" style="color: ${social.color};">
                     <i class="${social.icon} fa-2x"></i>
