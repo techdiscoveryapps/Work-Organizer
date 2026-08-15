@@ -475,7 +475,7 @@ const creditsData = [
     },
     {
         "name": "Telegram",
-        "url": "https://t.me/TechDiscoveryCommunity",
+        "url": "https://t.me/TechDiscoveryCommunityApps",
         "icon": "fa-brands fa-telegram",
         "title": "Telegram Community Group",
         "color": "#0088cc"
