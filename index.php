@@ -352,51 +352,58 @@
 <!-- ==================== ABOUT MODAL ==================== -->
 <div class="modal fade" id="creditsModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">
-                    <i class="fas fa-user-astronaut me-2 text-gradient"></i>About the Developer
-                </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <div class="modal-content about-modal-content">
+            <div class="modal-header about-modal-header">
+                <h5 class="modal-title">About the Developer</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body text-center py-4">
+            <div class="modal-body text-center about-modal-body">
                 <div class="mb-4">
-                    <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center mb-3 shadow-glow" style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--accent-primary), var(--accent-success)) !important;">
-                        <i class="fas fa-rocket fa-3x text-white"></i>
+                    <div class="brand-avatar mb-3">
+                        <img src="icons/TechDiscoveryApps.png" alt="Tech Discovery Apps" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="brand-avatar-fallback" style="display:none;">T</div>
                     </div>
-                    <h4>Tech Discovery Apps</h4>
-                    <p class="text-muted">Developing tools to make life easier.</p>
+                    <h4 id="brandName">Tech Discovery Apps</h4>
+                    <p class="text-muted mb-2" id="brandTagline">Developing tools to make life easier.</p>
+                    <p class="text-muted small" id="brandDescription">Independent developer building practical, beautiful tools for everyday productivity. From web apps to mobile utilities, the focus is always on clean design, reliability, and a great user experience.</p>
                 </div>
-                
-                <div class="row g-2 mb-4" id="social-links-container">
+
+                <div class="pt-3">
+                    <h6 class="mb-3 text-muted">Follow Us</h6>
+                    <hr class="mb-3">
+                    <div class="row g-2 mb-2 justify-content-center" id="social-links-container">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <div class="row g-2 mb-4" id="websiteLink">
                     <!-- Populated by JS -->
                 </div>
 
-                <div class="mb-4">
-                    <a href="https://www.techdiscoveryapps.com" target="_blank" class="btn btn-outline-primary btn-sm">
-                        <i class="fas fa-globe me-1"></i>www.techdiscoveryapps.com
-                    </a>
-                </div>
-
-                <div class="pt-3 border-top">
+                <div class="pt-3">
                     <h6 class="mb-3 text-muted">Support the Project</h6>
-                    <a href="https://buymeacoffee.com/techdiscoveryapps" target="_blank" class="bmc-button d-inline-block">
-                        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 50px !important; width: 180px !important;">
-                    </a>
-                    <div class="mt-3">
-                        <button class="btn revolut-btn-pay" data-bs-toggle="modal" data-bs-target="#donateModal">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" style="flex-shrink: 0;"><path d="M20.9133 6.9566C20.9133 3.1208 17.7898 0 13.9503 0H2.424v3.8605h10.9782c1.7376 0 3.177 1.3651 3.2087 3.043.016.84-.2994 1.633-.8878 2.2324-.5886.5998-1.375.9303-2.2144.9303H9.2322a.2756.2756 0 0 0-.2755.2752v3.431c0 .0585.018.1142.052.1612L16.2646 24h5.3114l-7.2727-10.094c3.6625-.1838 6.61-3.2612 6.61-6.9494zM6.8943 5.9229H2.424V24h4.4704z"/></svg><span class="revolut-pay-label">Donate via Revolut Pay</span>
+                    <hr class="mb-3">
+                    <div>
+                        <button class="btn revolut-btn-pay support-btn" data-bs-toggle="modal" data-bs-target="#donateModal">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M20.9133 6.9566C20.9133 3.1208 17.7898 0 13.9503 0H2.424v3.8605h10.9782c1.7376 0 3.177 1.3651 3.2087 3.043.016.84-.2994 1.633-.8878 2.2324-.5886.5998-1.375.9303-2.2144.9303H9.2322a.2756.2756 0 0 0-.2755.2752v3.431c0 .0585.018.1142.052.1612L16.2646 24h5.3114l-7.2727-10.094c3.6625-.1838 6.61-3.2612 6.61-6.9494zM6.8943 5.9229H2.424V24h4.4704z"/></svg>
+                            <span>Donate via Revolut Pay</span>
                         </button>
                     </div>
                     <div class="mt-2">
-                        <button class="btn paypal-btn-pay" data-bs-toggle="modal" data-bs-target="#donatePaypalModal">
-                            <i class="fa-brands fa-paypal" style="font-size: 1.1rem; flex-shrink: 0;"></i><span>Donate via PayPal</span>
+                        <button class="btn paypal-btn-pay support-btn" data-bs-toggle="modal" data-bs-target="#donatePaypalModal">
+                            <i class="fa-brands fa-paypal"></i>
+                            <span>Donate via PayPal</span>
                         </button>
+                    </div>
+                    <div class="mt-2">
+                        <a href="https://buymeacoffee.com/techdiscoveryapps" target="_blank" class="btn bmc-btn-pay support-btn">
+                            <i class="fas fa-mug-hot"></i><span>Buy Me A Coffee</span>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <div class="modal-footer about-modal-footer">
+                <small class="text-muted">Developed with <i class="fas fa-heart text-danger"></i> by <span id="footerBrand">Tech Discovery Apps</span></small>
             </div>
         </div>
     </div>
@@ -1372,17 +1379,20 @@ async function populateMonthSelects() {
 function renderCredits() {
     const container = document.getElementById('social-links-container');
     if (!container) return;
-    
+
     container.innerHTML = creditsData.map(social => `
-        <div class="col-4">
-            <a href="${social.url}" target="_blank" class="social-link-card text-decoration-none" title="${social.title}">
-                <div class="social-icon-wrapper mb-2" style="color: ${social.color};">
-                    <i class="${social.icon} fa-2x"></i>
-                </div>
-                <div class="small fw-bold">${social.name}</div>
+        <div class="col-12 col-sm-6 col-md-4">
+            <a href="${social.url}" target="_blank" class="social-btn" title="${social.title}">
+                <i class="${social.icon}" style="color: ${social.color};"></i>${social.name === 'X' ? '' : ' ' + social.name}
             </a>
         </div>
     `).join('');
+
+    // Website link
+    const webEl = document.getElementById('websiteLink');
+    if (webEl) {
+        webEl.innerHTML = `<div class="col-12"><a href="https://www.techdiscoveryapps.com" target="_blank" class="social-btn" title="www.techdiscoveryapps.com"><i class="fas fa-globe" style="color: var(--accent-primary);"></i> www.techdiscoveryapps.com</a></div>`;
+    }
 }
 
 window.onload = async function () {
