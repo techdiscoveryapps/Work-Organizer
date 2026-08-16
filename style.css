@@ -901,7 +901,9 @@ body {
 }
 
 /* Buy Me A Coffee button */
-.bmc-btn-pay {
+.bmc-btn-pay,
+.bmc-btn-pay span,
+.bmc-btn-pay i {
     background: #FFDD00;
     border: 1px solid transparent;
     color: #000 !important;
@@ -914,7 +916,9 @@ body {
     transition: all 0.3s ease;
 }
 
-.bmc-btn-pay:hover {
+.bmc-btn-pay:hover,
+.bmc-btn-pay:hover span,
+.bmc-btn-pay:hover i {
     background: #FFE54A;
     color: #000 !important;
     border-color: #fff;
