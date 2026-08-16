@@ -388,6 +388,11 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" style="flex-shrink: 0;"><path d="M20.9133 6.9566C20.9133 3.1208 17.7898 0 13.9503 0H2.424v3.8605h10.9782c1.7376 0 3.177 1.3651 3.2087 3.043.016.84-.2994 1.633-.8878 2.2324-.5886.5998-1.375.9303-2.2144.9303H9.2322a.2756.2756 0 0 0-.2755.2752v3.431c0 .0585.018.1142.052.1612L16.2646 24h5.3114l-7.2727-10.094c3.6625-.1838 6.61-3.2612 6.61-6.9494zM6.8943 5.9229H2.424V24h4.4704z"/></svg><span class="revolut-pay-label">Donate via Revolut Pay</span>
                         </button>
                     </div>
+                    <div class="mt-2">
+                        <button class="btn paypal-btn-pay" data-bs-toggle="modal" data-bs-target="#donatePaypalModal">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" style="flex-shrink: 0; fill: #fff;"><path d="M7.076 21.567c.398.169.853.298 1.37.387.514.087 1.122.131 1.818.131.926 0 1.765-.107 2.517-.324a5.555 5.555 0 0 0 1.94-.954c.546-.422.971-.953 1.272-1.592.301-.64.452-1.395.452-2.266 0-.625-.087-1.176-.262-1.652a3.676 3.676 0 0 0-.75-1.234 4.328 4.328 0 0 0-1.19-.876 6.089 6.089 0 0 0-1.604-.516c.452-.215.838-.456 1.158-.723.32-.268.586-.56.798-.876.212-.316.37-.66.474-1.032.104-.372.156-.78.156-1.224 0-.737-.135-1.378-.406-1.922a3.55 3.55 0 0 0-1.143-1.337A5.013 5.013 0 0 0 13.67 5.94a8.324 8.324 0 0 0-2.094-.428V2H8.998v3.493H7.003V2H4.421v3.493H.762v2.053h3.659v11.01H.762v2.053h3.659V24h2.582v-3.493h1.995V24h2.578v-3.617a7.402 7.402 0 0 1-1.5-.816Zm-1.27-15.021h3.59c.566 0 1.063.063 1.49.19.428.127.785.307 1.073.54.288.234.504.517.648.85.144.332.216.704.216 1.115 0 .448-.07.842-.21 1.182a2.13 2.13 0 0 1-.612.84 2.66 2.66 0 0 1-.984.504 4.85 4.85 0 0 1-1.318.169H5.806V6.546Zm4.05 8.998c.556 0 1.046.066 1.47.198.424.132.778.323 1.063.573.285.25.5.553.646.908.145.355.218.755.218 1.2 0 .915-.313 1.622-.94 2.12-.625.499-1.523.748-2.694.748H5.806v-5.747h4.05Z"/></svg><span>Donate via PayPal</span>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
@@ -447,6 +452,47 @@
                 <button type="button" class="btn revolut-btn-pay-outline" data-bs-dismiss="modal">Cancel</button>
                 <button type="button" class="btn revolut-btn-pay" id="donateBtn">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" style="flex-shrink: 0;"><path d="M20.9133 6.9566C20.9133 3.1208 17.7898 0 13.9503 0H2.424v3.8605h10.9782c1.7376 0 3.177 1.3651 3.2087 3.043.016.84-.2994 1.633-.8878 2.2324-.5886.5998-1.375.9303-2.2144.9303H9.2322a.2756.2756 0 0 0-.2755.2752v3.431c0 .0585.018.1142.052.1612L16.2646 24h5.3114l-7.2727-10.094c3.6625-.1838 6.61-3.2612 6.61-6.9494zM6.8943 5.9229H2.424V24h4.4704z"/></svg><span class="revolut-pay-label">Donate</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PayPal Donate Modal -->
+<div class="modal fade" id="donatePaypalModal" tabindex="1" aria-labelledby="donatePaypalModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content paypal-donate-modal-content">
+            <div class="modal-header paypal-donate-modal-header">
+                <h5 class="modal-title d-flex align-items-center" id="donatePaypalModalLabel" style="color: #0070ba;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="me-2" style="fill: #0070ba; flex-shrink: 0;"><path d="M7.076 21.567c.398.169.853.298 1.37.387.514.087 1.122.131 1.818.131.926 0 1.765-.107 2.517-.324a5.555 5.555 0 0 0 1.94-.954c.546-.422.971-.953 1.272-1.592.301-.64.452-1.395.452-2.266 0-.625-.087-1.176-.262-1.652a3.676 3.676 0 0 0-.75-1.234 4.328 4.328 0 0 0-1.19-.876 6.089 6.089 0 0 0-1.604-.516c.452-.215.838-.456 1.158-.723.32-.268.586-.56.798-.876.212-.316.37-.66.474-1.032.104-.372.156-.78.156-1.224 0-.737-.135-1.378-.406-1.922a3.55 3.55 0 0 0-1.143-1.337A5.013 5.013 0 0 0 13.67 5.94a8.324 8.324 0 0 0-2.094-.428V2H8.998v3.493H7.003V2H4.421v3.493H.762v2.053h3.659v11.01H.762v2.053h3.659V24h2.582v-3.493h1.995V24h2.578v-3.617a7.402 7.402 0 0 1-1.5-.816Zm-1.27-15.021h3.59c.566 0 1.063.063 1.49.19.428.127.785.307 1.073.54.288.234.504.517.648.85.144.332.216.704.216 1.115 0 .448-.07.842-.21 1.182a2.13 2.13 0 0 1-.612.84 2.66 2.66 0 0 1-.984.504 4.85 4.85 0 0 0-1.318.169H5.806V6.546Zm4.05 8.998c.556 0 1.046.066 1.47.198.424.132.778.323 1.063.573.285.25.5.553.646.908.145.355.218.755.218 1.2 0 .915-.313 1.622-.94 2.12-.625.499-1.523.748-2.694.748H5.806v-5.747h4.05Z"/></svg>Donate via PayPal
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="mb-4 text-muted">Select an amount or enter your own:</p>
+                <div class="row g-2 mb-3">
+                    <div class="col-4"><button class="btn btn-outline-light w-100 paypal-amount-btn" data-amount="1">&euro;1</button></div>
+                    <div class="col-4"><button class="btn btn-outline-light w-100 paypal-amount-btn" data-amount="3">&euro;3</button></div>
+                    <div class="col-4"><button class="btn btn-outline-light w-100 paypal-amount-btn" data-amount="5">&euro;5</button></div>
+                    <div class="col-4"><button class="btn btn-outline-light w-100 paypal-amount-btn" data-amount="10">&euro;10</button></div>
+                    <div class="col-4"><button class="btn btn-outline-light w-100 paypal-amount-btn" data-amount="20">&euro;20</button></div>
+                    <div class="col-4"><button class="btn btn-outline-light w-100 paypal-amount-btn" data-amount="50">&euro;50</button></div>
+                </div>
+                <div class="mb-3">
+                    <label for="paypalCustomAmount" class="form-label">Custom Amount (EUR)</label>
+                    <input type="number" class="form-control revolut-donate-form-control" id="paypalCustomAmount" placeholder="Enter amount" min="1" step="0.01">
+                </div>
+                <div class="alert paypal-donate-alert-info">
+                    <small>
+                        <i class="fas fa-info-circle me-1"></i>
+                        You will be redirected to PayPal to complete your donation.
+                    </small>
+                </div>
+            </div>
+            <div class="modal-footer paypal-donate-modal-footer">
+                <button type="button" class="btn revolut-btn-pay-outline" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn paypal-btn-pay" id="donatePaypalBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" style="flex-shrink: 0; fill: #fff;"><path d="M7.076 21.567c.398.169.853.298 1.37.387.514.087 1.122.131 1.818.131.926 0 1.765-.107 2.517-.324a5.555 5.555 0 0 0 1.94-.954c.546-.422.971-.953 1.272-1.592.301-.64.452-1.395.452-2.266 0-.625-.087-1.176-.262-1.652a3.676 3.676 0 0 0-.75-1.234 4.328 4.328 0 0 0-1.19-.876 6.089 6.089 0 0 0-1.604-.516c.452-.215.838-.456 1.158-.723.32-.268.586-.56.798-.876.212-.316.37-.66.474-1.032.104-.372.156-.78.156-1.224 0-.737-.135-1.378-.406-1.922a3.55 3.55 0 0 0-1.143-1.337A5.013 5.013 0 0 0 13.67 5.94a8.324 8.324 0 0 0-2.094-.428V2H8.998v3.493H7.003V2H4.421v3.493H.762v2.053h3.659v11.01H.762v2.053h3.659V24h2.582v-3.493h1.995V24h2.578v-3.617a7.402 7.402 0 0 1-1.5-.816Zm-1.27-15.021h3.59c.566 0 1.063.063 1.49.19.428.127.785.307 1.073.54.288.234.504.517.648.85.144.332.216.704.216 1.115 0 .448-.07.842-.21 1.182a2.13 2.13 0 0 1-.612.84 2.66 2.66 0 0 1-.984.504 4.85 4.85 0 0 0-1.318.169H5.806V6.546Zm4.05 8.998c.556 0 1.046.066 1.47.198.424.132.778.323 1.063.573.285.25.5.553.646.908.145.355.218.755.218 1.2 0 .915-.313 1.622-.94 2.12-.625.499-1.523.748-2.694.748H5.806v-5.747h4.05Z"/></svg><span>Donate</span>
                 </button>
             </div>
         </div>
@@ -1390,6 +1436,45 @@ document.addEventListener('DOMContentLoaded', function() {
             window.open(revolutLink, '_blank');
 
             const modal = bootstrap.Modal.getInstance(document.getElementById('donateModal'));
+            modal.hide();
+        });
+    }
+
+    // ===== PayPal Donate Modal =====
+    let paypalSelectedAmount = 5;
+
+    document.querySelectorAll('.paypal-amount-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.paypal-amount-btn').forEach(b => {
+                b.classList.remove('paypal-amount-active');
+            });
+            this.classList.add('paypal-amount-active');
+            paypalSelectedAmount = parseFloat(this.dataset.amount);
+            document.getElementById('paypalCustomAmount').value = paypalSelectedAmount;
+        });
+    });
+
+    const paypalCustomInput = document.getElementById('paypalCustomAmount');
+    if (paypalCustomInput) {
+        paypalCustomInput.addEventListener('input', function() {
+            document.querySelectorAll('.paypal-amount-btn').forEach(b => {
+                b.classList.remove('paypal-amount-active');
+            });
+            paypalSelectedAmount = parseFloat(this.value);
+        });
+    }
+
+    const donatePaypalBtn = document.getElementById('donatePaypalBtn');
+    if (donatePaypalBtn) {
+        donatePaypalBtn.addEventListener('click', function() {
+            const customAmount = parseFloat(document.getElementById('paypalCustomAmount').value);
+            const finalAmount = customAmount || paypalSelectedAmount || 5;
+            if (!finalAmount || finalAmount <= 0) { alert('Please select a valid amount.'); return; }
+
+            const paypalLink = `https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=${encodeURIComponent('techdiscoverylinks@gmail.com')}&currency_code=EUR&amount=${finalAmount.toFixed(2)}&item_name=${encodeURIComponent('Donation for Tech Discovery Apps')}`;
+            window.open(paypalLink, '_blank');
+
+            const modal = bootstrap.Modal.getInstance(document.getElementById('donatePaypalModal'));
             modal.hide();
         });
     }

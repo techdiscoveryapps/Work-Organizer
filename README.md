@@ -61,5 +61,10 @@ If you find this tool helpful, consider following my work or supporting the proj
   <img src="https://img.shields.io/badge/Revolut_Pay-191C1F?style=for-the-badge&logo=revolut&logoColor=white" alt="Donate via Revolut Pay">
 </a>
 
+### 💙 Donate via PayPal
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=techdiscoverylinks@gmail.com&currency_code=EUR" target="_blank">
+  <img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Donate via PayPal">
+</a>
+
 ---
 Developed with ❤️ by **Tech Discovery Apps**
